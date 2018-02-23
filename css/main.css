@@ -1,0 +1,448 @@
+/* Color Palette
+  Wheat #F5BBCE;
+  Chocolate #DC8523;
+  Dark Olive Green #47301C;
+  Sienna #8E5C3C;
+  Dark Olive Green Light #74523C;
+*/
+
+/*fonts
+font-family: 'Berkshire Swash', cursive;
+*/
+
+@font-face {
+font-family: 'Chomp';
+src: url('../fonts/Chomp.eot') format('embedded-opentype'),
+     url('../fonts/Chomp.woff2') format('woff2'),
+     url('../fonts/Chomp.woff') format('woff'),
+     url('../fonts/Chomp.ttf') format('truetype'),
+     url('../fonts/Chomp.svg#Chomp') format('svg');
+}
+
+
+@font-face {
+    font-family: 'ShaniaHeinzPersonalUseOnly';
+    src: url('../fonts/ShaniaHeinzPersonalUseOnly.woff2') format('woff2'),
+        url('../fonts/ShaniaHeinzPersonalUseOnly.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*********** Begin Layout Styles ***********/
+body {
+background-color: #db8778;
+background-attachment: fixed;
+}
+
+div.container {
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+
+
+}
+
+header, main, footer {
+padding-left: 10px;
+padding-right: 10px;
+}
+
+/* phones (base layout is mobile-first) */
+header {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "logo"
+    "name"
+    "navbar";
+}
+
+main {
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "about"
+    "review"
+    "hours";
+
+}
+
+footer {
+  display: grid;
+  padding-top: 20px;
+background-color: #8E5C3C;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "map"
+    "social"
+    "contact"
+    "credit";
+}
+
+/* tablets and small laptops */
+@media (min-width: 600px) {
+
+  header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo logo"
+      "name name"
+      "navbar navbar";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel"
+      "about about"
+      "review hours";
+  }
+
+  footer {
+    padding-top: 20px;
+    background-color: #8E5C3C;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "map map map"
+    "contact contact contact"
+    "social social social"
+    "credit credit credit";
+  }
+}
+
+/* desktops */
+@media (min-width: 900px) {
+  header {
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+      "logo name"
+      "navbar navbar";
+  }
+
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "carousel carousel about"
+      "review review hours";
+  }
+
+  footer {
+    padding-top: 20px;
+    background-color: #8E5C3C;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "map contact social"
+    "credit credit credit";
+  }
+}
+
+div {
+
+}
+
+main div {
+
+}
+
+div#name{
+  grid-area: name;
+  font-size: 95px;
+  text-align: center;
+}
+
+div#logo {
+  grid-area: logo;
+}
+
+div#navbar {
+  grid-area: navbar;
+}
+
+div#carousel {
+  grid-area: carousel;
+  margin-top: 20px;
+}
+
+div#about {
+  grid-area: about;
+
+}
+
+div#review {
+  grid-area: review;
+  border-width:2px;
+  border-style:outset;
+  border-color: #8E5C3C ;
+  text-align: center;
+  padding-bottom: 40px;
+  margin-bottom: 80px;
+  font-style: italic;
+
+}
+
+div#hours {
+  grid-area: hours;
+  text-align: center;
+  background-color:  #F5BBCE;
+  border-radius: 5%;
+  font-weight: bolder;
+  max-height: 950px;
+
+}
+
+div#social {
+  grid-area: social;
+  padding-top: 10px;
+}
+
+div#contact {
+  grid-area: contact;
+
+}
+
+div#credit {
+  grid-area: credit;
+}
+
+div#map{
+  grid-area: map;
+  max-width: 100%;
+}
+
+@media (max-width: 599px){
+  div#carousel {
+    display: none;
+  }
+}
+
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #F5BBCE;
+  }
+}
+
+
+/*********** End Layout Styles ***********/
+
+
+/*********** Begin Content Styles ***********/
+
+/* Headings */
+h1 {
+  font-family: 'ShaniaHeinzPersonalUseOnly';
+  text-shadow: 2px 2px 4px #000000;
+  color: #74523C;
+
+}
+
+h2 {
+font-family: 'Chomp';
+color: #47301C;
+font-size: 70px;
+text-align: center;
+}
+
+h3 {
+
+}
+
+h4 {
+font-size: 30px;
+font-family: 'Dosis', sans-serif;
+font-weight: bold;
+font-variant: small-caps;
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+/* Paragraphs and lists */
+
+p {
+ font-family: 'Dosis', sans-serif;
+ line-height: 1.6;
+ font-size: 18px;
+ max-width: 660px;
+
+
+}
+
+ol {
+
+}
+
+ul {
+
+}
+
+li {
+
+}
+
+/* tables */
+
+table {
+
+}
+
+caption {
+
+}
+
+tr {
+
+}
+
+th {
+
+}
+
+td {
+
+}
+
+/* images */
+img {
+  max-width: 100%;
+  margin: none;
+}
+
+.left{
+  float: left;
+  padding-top: 40px;
+  padding-left: 80px;
+
+}
+
+.right{
+  float: right;
+}
+
+.time{
+font-family: 'Berkshire Swash', cursive;
+font-size: 22px;
+
+}
+
+/* links */
+nav {
+  width: 100%;
+  margin: 0 auto;
+  background: #47301C;
+  padding: 10px 0;
+
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+
+a:link {
+
+}
+
+a:visited {
+
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+/* forms */
+
+
+
+/*********** End Content Styles ***********/
