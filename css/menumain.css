@@ -32,7 +32,7 @@ src: url('../fonts/Chomp.eot') format('embedded-opentype'),
 /*********** Begin Layout Styles ***********/
 body {
 background-color: #db8778;
-background-attachment: fixed;
+overflow-x: hidden;
 }
 
 div.container {
@@ -67,9 +67,9 @@ main {
   grid-row-gap: 15px;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "about"
-    "review"
-    "hours";
+    "page-name"
+    "donut"
+    "coffee";
 
 }
 
@@ -101,9 +101,9 @@ background-color: #8E5C3C;
   main {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "carousel carousel"
-      "about about"
-      "review hours";
+      "page-name page-name"
+      "donut donut"
+      "coffee coffee";
   }
 
   footer {
@@ -130,8 +130,8 @@ background-color: #8E5C3C;
   main {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "carousel carousel about"
-      "review review hours";
+      "page-name page-name page-name"
+      "donut donut coffee";
   }
 
   footer {
@@ -160,42 +160,34 @@ div#name{
 
 div#logo {
   grid-area: logo;
+  max-width: 100%;
 }
 
 div#navbar {
   grid-area: navbar;
 }
 
-div#carousel {
-  grid-area: carousel;
-  margin-top: 20px;
+div#page-name{
+  grid-area: page-name;
 }
 
-div#about {
-  grid-area: about;
-
-}
-
-div#review {
-  grid-area: review;
-  border-width:2px;
-  border-style:outset;
-  border-color: #8E5C3C ;
-  text-align: center;
-  padding-bottom: 40px;
-  margin-bottom: 80px;
-  font-style: italic;
-
-}
-
-div#hours {
-  grid-area: hours;
-  text-align: center;
+div#donut {
+  grid-area: donut;
   background-color:  #F5BBCE;
-  border-radius: 5%;
-  font-weight: bolder;
-  max-height: 950px;
+  padding: 10px;
+  margin: 10px;
 
+}
+
+.ok{
+padding-top: 15px;
+text-shadow: 2px 2px 2px #FFFFFF;
+color: #
+
+}
+
+div#coffee {
+  grid-area: coffee;
 }
 
 div#social {
@@ -253,7 +245,6 @@ h1 {
   padding-top: 65px;
   margin: 0;
 
-
 }
 
 h2 {
@@ -264,7 +255,9 @@ text-align: center;
 }
 
 h3 {
-
+  font-family: 'ShaniaHeinzPersonalUseOnly';
+  font-size: 70px;
+  margin: 0;
 }
 
 h4 {
@@ -289,9 +282,6 @@ p {
  font-family: 'Dosis', sans-serif;
  line-height: 1.6;
  font-size: 18px;
- max-width: 660px;
-
-
 }
 
 ol {
@@ -299,11 +289,11 @@ ol {
 }
 
 ul {
-
+list-style: none;
 }
 
 li {
-
+  text-align: center;
 
 }
 
@@ -332,14 +322,14 @@ td {
 /* images */
 img {
   max-width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
+
 }
 
 .left{
-  float: left;
   padding-top: 40px;
   padding-left: 80px;
+
 
 }
 
